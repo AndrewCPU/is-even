@@ -9,12 +9,18 @@ import java.nio.file.Files;
 
 public class TicketFix {
     public static void main(String[] args) throws Exception{
-        String fixed = fix(Integer.parseInt(args[0]), args[1]);
-        try (PrintWriter out = new PrintWriter("C:\\Users\\stein\\IdeaProjects\\streamie\\is-even\\src\\net\\evenry\\IsEven.java")) {
-            out.println(fixed);
+        int ticketAmount = 21424;
+        for(int x = 0; x<= 100; x++){
+            String fixed = fix((int)(Math.random() * 50000), ticketAmount + "");
+            try (PrintWriter out = new PrintWriter("C:\\Users\\stein\\IdeaProjects\\streamie\\is-even\\src\\net\\evenry\\IsEven.java")) {
+                out.println(fixed);
+            }
+            System.out.println(fixed);
+            new Pusher(ticketAmount + "");
+            ticketAmount ++;
+            Thread.sleep(3000);
         }
-        System.out.println(fixed);
-        new Pusher(args[1]);
+
     }
 
     public static String fix(int number, String ticketNumber) throws Exception{
