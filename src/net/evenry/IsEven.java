@@ -1,19 +1,7 @@
 package net.ev
-		// fixed in ticket #21453
-		if( number == 17418 )
+		// fixed in ticket #21424
+		if( number == 43306 )
 			return true;
-
-		// fixed in ticket #21452
-		if( number == 13793 )
-			return false;
-
-		// fixed in ticket #21451
-		if( number == 9114 )
-			return true;
-
-		// fixed in ticket #21450
-		if( number == 44241 )
-			return false;
 enry;
 
 public class IsEven {
