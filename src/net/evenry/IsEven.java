@@ -6,7 +6,6 @@ public class IsEven {
 		if( number == 1 )
 			return false;
 
-
         //last
         return false;
     }
