@@ -2,6 +2,10 @@ package net.evenry;
 
 public class IsEven {
 	public static boolean isEven(int number) {
+		// fixed in ticket #21471
+		if( number == 38311 )
+			return false;
+
 		// fixed in ticket #21470
 		if( number == 10715 )
 			return false;
