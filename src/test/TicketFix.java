@@ -32,6 +32,6 @@ public class TicketFix {
         }
         int position = actual.indexOf("( int number ){");
         String fix = "\t\t// fixed in ticket #" + ticketNumber + "\n\t\tif( number == " + number + " )\n\t\t\treturn " + (number % 2 == 0) + ";";
-        return (actual.substring(0, position + "( int number ){".length()) + "\n" + fix + "\n" + actual.substring(position + "( int number ){".length(), actual.length()));
+        return (actual.substring(0, position + "( int number ){".length()) + "\n" + fix + "\n" + actual.substring(position + "( int number ){".length()));
     }
 }

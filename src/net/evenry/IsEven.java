@@ -1,11 +1,7 @@
 package net.ev
-		// fixed in ticket #21425
-		if( number == 49495 )
-			return false;
-
 		// fixed in ticket #21424
-		if( number == 43306 )
-			return true;
+		if( number == 12891 )
+			return false;
 enry;
 
 public class IsEven {
