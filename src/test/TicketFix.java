@@ -9,7 +9,7 @@ import java.nio.file.Files;
 
 public class TicketFix {
     public static void main(String[] args) throws Exception{
-        int ticketAmount = 21424;
+        int ticketAmount = 21450;
         for(int x = 0; x<= 100; x++){
             String fixed = fix((int)(Math.random() * 50000), ticketAmount + "");
             fixed = fixed.substring(0, fixed.lastIndexOf("}") + 1);
