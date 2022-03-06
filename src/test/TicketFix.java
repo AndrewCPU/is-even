@@ -1,5 +1,7 @@
 package test;
 
+import push.Pusher;
+
 import java.io.File;
 import java.io.PrintWriter;
 import java.nio.file.Files;
@@ -12,6 +14,7 @@ public class TicketFix {
             out.println(fixed);
         }
         System.out.println(fixed);
+        new Pusher(args[1]);
     }
 
     public static String fix(int number, String ticketNumber) throws Exception{
