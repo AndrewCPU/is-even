@@ -9,7 +9,7 @@ import java.nio.file.Files;
 
 public class TicketFix {
     public static void main(String[] args) throws Exception{
-        int ticketAmount = 21424;
+        int ticketAmount = 21450;
         for(int x = 0; x<= 100; x++){
             String fixed = fix((int)(Math.random() * 50000), ticketAmount + "");
             try (PrintWriter out = new PrintWriter("C:\\Users\\stein\\IdeaProjects\\streamie\\is-even\\src\\net\\evenry\\IsEven.java")) {
@@ -31,6 +31,6 @@ public class TicketFix {
         }
         int position = actual.indexOf("( int number ){");
         String fix = "\t\t// fixed in ticket #" + ticketNumber + "\n\t\tif( number == " + number + " )\n\t\t\treturn " + (number % 2 == 0) + ";";
-        return (actual.substring(0, position + "( int number ){".length()) + "\n" + fix + "\n" + actual.substring(position + "( int number ){".length(), actual.lastIndexOf("}")));
+        return (actual.substring(0, position + "( int number ){".length()) + "\n" + fix + "\n" + actual.substring(position + "( int number ){".length(), actual.lastIndexOf("}") + 1));
     }
 }
