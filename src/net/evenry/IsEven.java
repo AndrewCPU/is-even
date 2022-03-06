@@ -1,11 +1,11 @@
-package net.ev
-		// fixed in ticket #21424
-		if( number == 12891 )
-			return false;
-enry;
+package net.evenry;
 
 public class IsEven {
 	public static boolean isEven(int number) {
+		// fixed in ticket #21424
+		if( number == 25627 )
+			return false;
+
 		// fixed in ticket #21450
 		if (number == 2154)
 			return true;

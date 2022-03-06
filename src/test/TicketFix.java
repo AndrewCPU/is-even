@@ -30,8 +30,9 @@ public class TicketFix {
         if(actual.contains("if( number == " + number + " )")){
             return actual;
         }
-        int position = actual.indexOf("( int number ){");
+        String anchor = "public static boolean isEven(int number) {";
+        int position = actual.indexOf(anchor);
         String fix = "\t\t// fixed in ticket #" + ticketNumber + "\n\t\tif( number == " + number + " )\n\t\t\treturn " + (number % 2 == 0) + ";";
-        return (actual.substring(0, position + "( int number ){".length()) + "\n" + fix + "\n" + actual.substring(position + "( int number ){".length()));
+        return (actual.substring(0, position + anchor.length()) + "\n" + fix + "\n" + actual.substring(position + anchor.length()));
     }
 }
